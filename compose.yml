@@ -1,10 +1,10 @@
-version: "3.9"
+version: "3.0"
 
 services:
   devopsdb:
     image: manikantathalari/auto:db
     ports:
-      - "3306:3306"
+      - "3333:3306"
     deploy:
       replicas: 3
     networks:
@@ -13,7 +13,7 @@ services:
   application:
     image: manikantathalari/auto:app
     ports:
-      - "1111:8080"
+      - "2222:8080"
     deploy:
       replicas: 3
     depends_on:
